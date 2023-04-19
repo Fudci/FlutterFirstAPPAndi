@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key});
@@ -18,22 +16,22 @@ class DetailPage extends StatelessWidget {
           children: [
             Expanded(
                 flex: 2,
-                child: Container(
+                child:  Container(
                   color: Colors.pink[50],
-                  child: Column(
+                  child:  Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                     const Text(
+                      Text(
                           "Shouko Komi (古こ見み 硝しょう子こ Komi Shouko?) is the titular character of Komi Can't Communicate. She has a communication disorder and is bad at communicating with people."),
-                     const SizedBox(
+                      SizedBox(
                         width: 20,
                         height: 20,
                       ),
                       Text(
                         'Apperance',
                         textAlign: TextAlign.left,
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                        style:  TextStyle(fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         width: 10,
@@ -48,7 +46,7 @@ class DetailPage extends StatelessWidget {
                       Text(
                         'History',
                         textAlign: TextAlign.left,
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                        style:  TextStyle(fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         width: 10,
