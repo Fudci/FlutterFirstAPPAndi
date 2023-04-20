@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/detail_page/detail_page.dart';
+import 'package:flutter_application/extentions.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,7 +13,6 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          
           Image.network(
             'https://i.redd.it/33mcrx5hlss41.jpg',
             height: 200,
@@ -22,9 +22,7 @@ class HomePage extends StatelessWidget {
           const Text('Komi-san'),
           const SizedBox(height: 16, width: 100),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.black
-            ),
+              style: ElevatedButton.styleFrom(primary: '#4A2E51'.toColor()),
               onPressed: () {
                 Navigator.push(
                     context,

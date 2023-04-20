@@ -91,8 +91,8 @@ class DetailPage extends StatelessWidget {
                         Container(
                           alignment: Alignment.center,
                           height: 30,
-                          color: Colors.purple[600],
-                          child: Text('Character Name'),
+                          color: '#4A2E51'.toColor(),
+                          child: Text('Character Name',style: TextStyle(color: Colors.white),),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -135,8 +135,8 @@ class DetailPage extends StatelessWidget {
                         Container(
                           alignment: Alignment.center,
                           height: 30,
-                          color: Colors.purple[600],
-                          child: Text('Personal Info'),
+                          color: '#4A2E51'.toColor(),
+                          child: Text('Personal Info', style: TextStyle(color: Colors.white),),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
