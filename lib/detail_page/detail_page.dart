@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/extentions.dart';
+import 'package:flutter_application/galery_art/galery_page.dart';
 import 'package:flutter_application/size_helpers.dart';
 
 class DetailPage extends StatelessWidget {
@@ -17,7 +18,15 @@ class DetailPage extends StatelessWidget {
         children: [
           TextButton(onPressed: () {}, child: Text('PROFILE')),
           TextButton(onPressed: () {}, child: Text('RELTIONSHIP')),
-          TextButton(onPressed: () {}, child: Text('GALLERY')),
+          TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const GaleryArt(),
+                    ));
+              },
+              child: Text('GALLERY')),
           TextButton(onPressed: () {}, child: Text('FAN ART')),
         ],
       ),
@@ -92,7 +101,10 @@ class DetailPage extends StatelessWidget {
                           alignment: Alignment.center,
                           height: 30,
                           color: '#4A2E51'.toColor(),
-                          child: Text('Character Name',style: TextStyle(color: Colors.white),),
+                          child: Text(
+                            'Character Name',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -136,7 +148,10 @@ class DetailPage extends StatelessWidget {
                           alignment: Alignment.center,
                           height: 30,
                           color: '#4A2E51'.toColor(),
-                          child: Text('Personal Info', style: TextStyle(color: Colors.white),),
+                          child: Text(
+                            'Personal Info',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

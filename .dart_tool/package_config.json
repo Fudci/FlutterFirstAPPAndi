@@ -14,6 +14,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "carousel_slider",
+      "rootUri": "file:///Users/andi/.pub-cache/hosted/pub.dev/carousel_slider-4.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///Users/andi/.pub-cache/hosted/pub.dev/characters-1.2.1",
       "packageUri": "lib/",
@@ -152,7 +158,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-11T15:45:12.709829Z",
+  "generated": "2023-04-21T03:01:47.414221Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
