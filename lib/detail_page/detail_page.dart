@@ -8,6 +8,7 @@ import 'dart:developer' as developer;
 
 final ScrollController _controller = ScrollController();
 
+
 void _scrollDown() {
   _controller.animateTo(
     _controller.position.minScrollExtent,
@@ -53,6 +54,85 @@ class _DetailPageState extends State<DetailPage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget fanart = Expanded(
+        child: CustomScrollView(
+      primary: false,
+      slivers: <Widget>[
+        SliverPadding(
+          padding: const EdgeInsets.all(20),
+          sliver: SliverGrid.count(
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            crossAxisCount: 2,
+            children: <Widget>[
+              Container(
+                color: Colors.green[100],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.3OyzRolxMcayaYS2RoS8KAHaEK%26pid%3DApi&f=1&ipt=e756de264d7921055ed0b30b58d4c69db5d283d8f735c798c3c699805a44cf9a&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                color: Colors.green[200],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.GPGvb6XlQjgp0LS4G7BjfgHaEK%26pid%3DApi&f=1&ipt=2af1b7af1a99e1ac439f58780c9a57cdf07298484d87f8828191bdd5ddebbdda&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                color: Colors.green[300],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.is9CA8QkHfiqvfUgQq-SzQAAAA%26pid%3DApi&f=1&ipt=8d8e6651913062c50671695231be0ca29d9025d44b8a40c7b11a1eadd3fcf8c5&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                color: Colors.green[400],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%3Fid%3DOIP.Iq5-Di6ivm7qKrLVJerbPAHaEK%26pid%3DApi&f=1&ipt=10412414218db3ba2c6362c765d79c2258862d234c7a1199034ed9dd927f31f7&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                color: Colors.green[500],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.iVYZtMsk9QCZeDK6TnBkzQHaEK%26pid%3DApi&f=1&ipt=cdfd59a719b5841111f2782b9c5ccb4c76c08458bb2743b7c75818e91e414fb7&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                color: Colors.green[600],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.-PpmHAptMJTUasdmTE_Q-QAAAA%26pid%3DApi&f=1&ipt=e1030420528dae1cb650b3bd3fbce4213d956aa0ae1f5c98e2a06112791dbde2&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                color: Colors.green[600],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.explicit.bing.net%2Fth%3Fid%3DOIP.SAFLOKSOpX5ZLf-t4SWq8QHaD4%26pid%3DApi&f=1&ipt=5fc9870705704def94e74bc8e35989f59821527951567bb6da330360bdd28fe3&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                color: Colors.green[600],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.XIXTRlaExTbnf75X-bcgbAAAAA%26pid%3DApi&f=1&ipt=0903db580b1fda1263683ffd9c60c8479a4b9fe15d8f77092b1537f24a903618&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                color: Colors.green[600],
+                child: Image.network(
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.9TNEU4sPO7UCkHZLkbk5OQHaEK%26pid%3DApi&f=1&ipt=f3357eef1556959bc82c60a5f5ccc1a5d8eb5bb4af1e515714112130d8f147c8&ipo=images',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ));
     Widget profile = Expanded(
         child: ListView(
       controller: _controller,
@@ -309,22 +389,24 @@ class _DetailPageState extends State<DetailPage> {
               child: Text('GALLERY')),
           TextButton(
               style: TextButton.styleFrom(
-                primary: page == "FAN ART" ? Colors.white : '#442D5C'.toColor(),
-                backgroundColor: page == "FAN ART"
-                    ? '#442D5C'.toColor()
-                    : Colors.transparent,
+                primary: page == "FANART" ? Colors.white : '#442D5C'.toColor(),
+                backgroundColor:
+                    page == "FANART" ? '#442D5C'.toColor() : Colors.transparent,
               ),
-              onPressed: () {},
-              child: Text('FAN ART')),
+              onPressed: () {
+                changeStatePage("FANART");
+              },
+              child: Text('FANART')),
         ],
       ),
     );
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: page != "FANART" ? FloatingActionButton(
+        backgroundColor: '#4A2E51'.toColor(),
         onPressed: _scrollDown,
-        tooltip: 'Increment',
+        tooltip: 'Scroll Up',
         child: const Icon(Icons.arrow_upward),
-      ),
+      ) :null,
       backgroundColor: '#F4EAF4'.toColor(),
       appBar: AppBar(
         systemOverlayStyle: context.isDarkMode
@@ -340,6 +422,7 @@ class _DetailPageState extends State<DetailPage> {
             topBar,
             if (page == "PROFILE") profile,
             if (page == "RELATIONSHIP") relationships,
+            if (page == "FANART") fanart,
           ],
         ),
       ),
